@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace asynawaitdemo
 {
@@ -6,7 +8,41 @@ namespace asynawaitdemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("How to call an asyncronous method from a main thread and wait till the results comes from async method");
+            Console.WriteLine("Synchronous programming: Each function will wait tilll the execution of previous functions");
+
+
+            Program program = new Program();
+
+            program.Task1();
+
+            string result1 = program.Task2();
+
+            int result2 = program.Task3();
+
+
+            Console.WriteLine("Message at the end");
+
+            Console.ReadKey();
+
+        }
+
+
+        public void Task1()
+        {
+            Console.WriteLine("Task1 completed");
+        }
+        public string Task2()
+        {
+            Console.WriteLine("Task2 Satrted at: {0}", DateTime.Now);
+            Thread.Sleep(5000);
+            Console.WriteLine("Task2 end at: {0}", DateTime.Now);
+            return "Outted from task2";
+        }
+        public int Task3()
+        {
+            Console.WriteLine("Task3 completed");
+            return 10;
         }
     }
 }
