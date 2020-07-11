@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>asynawaitdemo.Step1</StartupObject>
+    <StartupObject>asynawaitdemo.NotepadProcessor</StartupObject>
   </PropertyGroup>
 
 </Project>
