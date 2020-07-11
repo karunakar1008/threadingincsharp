@@ -12,6 +12,7 @@ namespace asynawaitdemo
         {
             Console.WriteLine("Learn How to call a long running method on a different thread, do not bother about the worker thread response");
 
+            Console.WriteLine("async and await are code markers from where code should start executing after a method is called on a different thread or in asyncronous way");
 
             Console.WriteLine("Main thread Started");
 
