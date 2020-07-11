@@ -11,6 +11,7 @@ namespace asynawaitdemo.Step4
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Learning: Get data from database on a Multi threaded way with out blocking main thread.");
 
             Console.WriteLine("Main thread Started");
 
