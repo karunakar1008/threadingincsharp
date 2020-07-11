@@ -10,7 +10,7 @@ namespace asynawaitdemo.Threading
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Is Threading really utilizing the my computer hardware capacity  Or it is just a time slicing or switiching between threads");
+            Console.WriteLine("Is Threading really utilizing  my computer hardware capacity  Or it is just a time slicing or switiching between threads");
 
 
             Console.WriteLine("Main thread Started");
