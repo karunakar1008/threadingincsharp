@@ -3,7 +3,11 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>asynawaitdemo.Step5.ConcurancyVsParallelism.Step4</StartupObject>
+    <StartupObject>asynawaitdemo.Step5.asynVsThread.Step4</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Step6\" />
+  </ItemGroup>
 
 </Project>
