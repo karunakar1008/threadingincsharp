@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>asynawaitdemo.Step4.Customer</StartupObject>
+    <StartupObject>asynawaitdemo.Threading.Step1</StartupObject>
   </PropertyGroup>
 
 </Project>
