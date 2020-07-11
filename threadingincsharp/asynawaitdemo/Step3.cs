@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace asynawaitdemo
 {
@@ -8,16 +10,35 @@ namespace asynawaitdemo
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("How to call an asyncronous method from a main thread and wait till the results comes from async method");
-            Console.WriteLine("Synchronous programming: Each function will wait tilll the execution of previous functions");
+            Console.WriteLine("Learn How to call a long running method on a different thread, do not bother about the worker thread response");
 
-           
 
-            Console.WriteLine("Message at the end");
+            Console.WriteLine("Main thread Started");
+
+            Metod();
+
+            Console.WriteLine("Main thread do not wait for worker thread to be completed");
 
             Console.ReadKey();
 
         }
 
+        public static async void Metod()
+        {
+            Console.WriteLine("New Thread started at: {0}", DateTime.Now);
+
+            await Task.Run(new Action(LongTask));
+
+            Console.WriteLine("New Thread end at: {0}", DateTime.Now);
+
+        }
+        public static void LongTask()
+        {
+            Console.WriteLine("Long running method is processing.....");
+
+            Thread.Sleep(5000);
+            Console.WriteLine("Long running method is processing completed");
+
+        }
     }
 }
